@@ -1,0 +1,949 @@
+/****************************/
+/* BASIC SETUP*/
+/*****************************/
+
+/*use rem unit instead of px unit for easy responsive*/
+
+/*For the whole body of template/web-page*/
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*For responsive purpose + Use that default font 
+  size if any font size missing*/
+html {
+
+	font-size: 62.5%; /*62.5% = 10px cause 
+	                   100% = 16px (usually default)*/
+
+	                   /*Use % for solve zoom in
+	                   and zoom out problem at any
+	                   browser */
+	scroll-behavior: smooth;
+}
+
+/*to use Titillium Web font in the template*/
+body{
+	font-family: 'Titillium Web', sans-serif;
+	text-rendering: optimizeLegibility; /*For rendering 
+										(Beautifully show)
+										the font*/
+
+	line-height: 1.3;
+	font-size: 1.6rem;
+}
+
+/*for every li item*/
+ul li {
+	list-style-type: none; 
+}
+
+/*For every Heading item*/
+h1 {	
+	font-size: 4.2rem; /*divide 42 by html font-size*/
+	color: #fff ;
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+	height: 0; /*Not necessary*/
+	visibility: hidden; /*Not necessary*/
+}
+
+/*For cut off the border in portfolio button*/
+:focus {
+	outline: 0;
+}
+
+
+/*****************************/
+/* REUSABLE COMPONENT*/
+/*****************************/
+
+
+/*For the area of every row div. For understand
+ try to use border.*/
+.row {
+	max-width: 114rem;
+	margin: 0 auto;
+}
+
+/*Every section have the same padding*/
+section {
+	padding: 8rem 0rem;
+}
+
+/*Almost every section have same size h2*/
+h2 {
+	font-size: 4rem;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: .3rem;
+	margin-top: 0;
+	margin-bottom: 2rem;
+	color: #fff;
+	text-align: center;
+}
+
+/*For Horizontal line after all h2*/
+h2::after {
+	content: "";
+	display: table;
+	height: .4rem;
+	background: #fff;
+	width: 8.5rem;
+	margin: auto;
+	margin-top: 2rem;
+}
+
+/*For all h3 tag*/
+h3 {
+	font-size: 2.4rem;
+	text-transform: uppercase;
+	font-weight: 600;
+	color: #fff;
+}
+
+h4 {
+	font-size: 1.8rem;
+	font-weight: 400;
+	margin-top: 2.5rem;
+	text-transform: uppercase;
+}
+
+/*Almost every section have same size paragraph
+after h2*/
+.little-description {
+	font-size: 1.8rem;
+	width: 60%;
+	margin-left: 20%;
+	line-height: 3rem;
+}
+
+.box {
+	padding: 1%;
+}
+
+/*for all p tag after logo*/
+.box p {
+	font-size: 1.6rem;
+	font-weight: 300;
+	margin-top: 2.8rem;
+	color: #fff;
+}
+
+
+/* For using Button */
+.btn:link,
+.btn:visited, 
+.btn {
+	background: #eb7d4b;
+	border-bottom: .3rem solid #c86a40;
+	padding: 1.5rem 6.0rem;
+	text-transform: uppercase;
+	color: #fff;
+	text-decoration: none;
+	border-radius: .3rem;
+	display: inline-block;
+	margin-top: 4.5rem;
+	font-size: 1.6rem;
+}
+
+
+/*****************************/
+/* HEADER SECTION*/
+/*****************************/
+
+/*For header area*/
+header {
+/*	background: #87509c;*/
+	background: -webkit-gradient(linear, 
+								left top, left bottom, 
+								from(rgba(135,80,156,0.9)), 
+								to(rgba(135,80,156,0.9))), 
+								url(../image/background-image/hero-bg.jpg);
+	background: linear-gradient(rgba(135,80,156,0.9), 
+								rgba(135,80,156,0.9)), 
+								url(../image/background-image/hero-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-attachment: fixed;
+	height: 85vh;
+	position: relative;
+}
+
+/*For Fixed the nav-bar in all section*/
+/*nav {
+	width: 100%;
+	background-color: #dddddd82;
+    position: fixed;
+    top: 0;
+    padding-bottom: 3rem;
+}*/
+
+/*For cuda logo*/
+.logo {
+	height: 3.5rem;
+	width: auto;
+	margin-top: 3.5rem;
+	float: left;
+}
+
+/*for specific width of hero-text-box*/
+.hero-text-box {
+	width: 114rem;
+	margin: 1.5rem 0 0 0;
+}
+
+/* main navigation bar placement*/
+.main-nav {
+	float: right;
+	margin-top: 3.5rem;
+}
+
+/* For li placement of main nav-bar */
+.main-nav li {
+	display: inline-block;
+	margin-left: 1.0rem;
+}
+
+/*To reduce margin of first li of nav-bar*/
+.main-nav li:first-child {
+	margin-left: 0;
+}
+
+/*For li of main nav-bar*/
+.main-nav li a:link, 
+.main-nav li a:visited {
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	background: rgb(100, 58, 121, 0);
+	padding: .6rem 1.6rem;
+	border-radius: .3rem;
+	display: inline-block;
+	font-size: 1.6rem;
+	-webkit-transition: 0.3s;
+	transition: 0.3s;
+} 
+
+/*Hover effect in li*/
+.main-nav li:hover a:link, 
+.main-nav li:hover a:visited {
+	background: rgb(100, 58, 121, 1);	
+}
+
+/*for activing 1st nav item (HOME)*/
+.main-nav li.active a{
+	background: rgb(100, 58, 121, 1);
+	border-radius: .3rem;
+}
+
+/*############## For Sticky Navigation ################*/
+
+/*Nav-bar will fixed after going to SERVICE Menu*/
+.sticky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: rgba(135,80,156,0.9);
+	padding: 1rem 0;
+	-webkit-box-shadow: 0 0.2rem 0.5rem rgba(255,255,255,0.9);
+	box-shadow: 0 0.2rem 0.5rem rgba(255,255,255,0.9); /*1st parameter - left-right shadow*/
+											 /*2nd parameter - top-bottom shadow*/
+											 /*3rd parameter - opacity*/
+
+	z-index: 9999; /*For everything going down the nav-bar area*/
+}
+
+/*For decrease margin from logo*/
+.sticky .logo {
+	margin-top: 0;
+}
+
+/*For decrease margin from ul li*/
+.sticky .main-nav {
+	margin-top: 0.2rem;
+}
+
+
+
+/*############ For nav-bar icon (Mobile Menu) ###########*/
+ 
+/*For nab-bar icon*/
+header nav .mobile-menu span {
+	color: #fff;
+	font-size: 4rem;
+	float: right;
+	margin-top: 2.5rem;
+	display: none;
+	cursor: pointer; /*hover is not working so i did this*/
+}
+
+/*For nav-bar icon hover*/
+.mobile-menu span :hover {
+	cursor: pointer;
+}
+
+/*For popup background/window (of nav-items) after clicking 
+the nav-bar icon*/
+header nav .mobile-menu .overlay {
+	width: 0; /*For not showing the popup window at first*/
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.9);
+	z-index: 100;
+	overflow-x: hidden;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+
+/*For all li item in popup window*/
+header nav .mobile-menu .overlay .ovarlay-content {
+	position: relative; /*To place the close icon*/
+	top: 10%;
+	width: 100%;
+	text-align: center;
+}
+
+/*For a tag used in popup window*/
+.ovarlay-content a {
+	text-decoration: none;
+	display: block;
+	font-size: 3rem;
+	text-transform: uppercase;
+	letter-spacing: 0.3rem;
+	color: #999;
+	padding: 1rem 0;
+}
+
+/*For hover in a*/
+.ovarlay-content a:hover {
+	color: #fff;
+}
+
+/*For close (*) icon to close the window*/
+.overlay .closebtn {
+	position: absolute;
+	top: 0;
+	right: 4.5rem;
+	font-size: 5rem;
+	color: #999;
+}
+
+/*For remove decoration in close icon */
+a.closebtn {
+	text-decoration: none;
+}
+
+/*For hover in close icon*/
+a.closebtn:hover {
+	color: #fff;
+}
+
+/*For decreasing margin in the sticky nav-bar*/
+.sticky .mobile-menu span {
+	margin-top: 0;
+	line-height: 1;
+}
+
+
+/*###################################################################*/
+
+/* For the area of h1 tag, button in Header Section */
+.hero-text-box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+/*Button in header section*/
+.btn-hero:link,
+.btn-hero:visited {
+	background: #eb7d4b;
+	border-color:  #c86a40;
+}
+
+
+/*****************************/
+/* SERVICE SECTION*/
+/*****************************/
+
+/*Main service body*/
+.services-section {
+	background: -webkit-gradient(linear, 
+								left top, left bottom, 
+								from(rgba(23,194,164,0.9)), 
+								to(rgba(23,194,164,0.9))), 
+								url(../image/background-image/services.jpg);
+	background: linear-gradient(rgba(23,194,164,0.9), 
+								rgba(23,194,164,0.9)), 
+								url(../image/background-image/services.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-attachment: fixed;
+	color: #fff;
+	text-align: center;
+}
+
+/*For Horizontal line color after h2*/
+.services-section h2::after {
+	background: #14a58c;
+}
+
+/*For logo (image) height and margin*/
+.services-section .services-icon {
+	height: 12.5rem;
+	margin-top: 8.4rem;
+	margin-bottom: 6.0rem;
+}
+
+
+/*****************************/
+/* TEAM SECTION*/
+/*****************************/
+
+/*For team area*/
+.team-section {
+	text-align: center;
+	background: -webkit-gradient(linear,
+								left top, left bottom,
+								from(rgba(231,241,248,0.7)),
+								to(rgba(231,241,248,0.7))),
+								url(../image/background-image/team-bg.jpg);
+	background: linear-gradient(rgba(231,241,248,0.7),
+								rgba(231,241,248,0.7)),
+								url(../image/background-image/team-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+/*For team header h2 tag*/
+.team-section h2{
+	color: #3c4761;
+}
+
+/*For a color of horizontal line after h2*/
+.team-section h2::after{
+	background: #c8d9e5;
+}
+
+/*For team memeber img tag*/
+.team-member {
+	margin-top: 4.5rem;
+	margin-bottom: 3.5rem;
+	height: 20rem;
+	width: 20rem;
+	border-radius: 50%;
+}
+
+/*For h3 tag after img*/
+.team-section h3 {
+	color: #27283d;
+}
+
+/*For designation after img*/
+span.role {
+	color: #30bae7;
+	font-size: 1.6rem;
+	text-transform: capitalize;
+	margin-top: .5rem;
+	display: inline-block; /*For use the margin in span tag*/
+}
+
+/*For p tag after img*/
+.team-section .box p {
+	color: #3c4761;
+}
+
+/*For Social link margin*/
+.team-section .social-link {
+	margin-top: 4.5rem;
+}
+
+/*For float-left of li of Social link*/
+.social-link ul li {
+	display: inline-block;
+	margin: 0 0.5rem;
+}
+
+/*For color of Social link*/
+.social-link ul li a:link,
+.social-link ul li a:visited,
+.social-link ul li a{
+	color: #fff;
+}
+
+/*For bg-color,height, width of bg & rotation speed of
+social icon*/
+.social-link ul li a i::before {
+	background: #bdd1df;
+	width: 2rem;
+	height: 2rem;
+	display: inline-block; /*width & height will not work without display: inline-block*/
+	font-size: 2rem;
+	padding: 1rem;
+	border-radius: 50%;
+	-webkit-transition: .5s;
+	transition: .5s; /*used for rotate, used for speed of rotation*/
+}
+
+/*For hover effect of social link*/
+.social-link ul li a:hover i::before {
+	background: #30bae7;
+	-webkit-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+.wrapper{
+  width: 100%;
+}
+.carousel{
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 30px;
+}
+.carousel .card{
+  color: #fff;
+  text-align: center;
+  margin: 20px 0;
+ /* line-height: 250px;
+  font-size: 90px;
+  font-weight: 600;*/
+  /*border-radius: 10px;*/
+  /*box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+*/}
+
+.owl-dots{
+  text-align: center;
+  margin-top: 40px;
+}
+.owl-dot{
+  height: 15px;
+  width: 45px;
+  margin: 0 5px;
+  outline: none;
+  border-radius: 14px;
+  border: 2px solid #0072bc!important;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.owl-dot.active,
+.owl-dot:hover{
+  background: #0072bc!important;
+}
+
+
+
+/*****************************/
+/* SKILLS SECTION*/
+/*****************************/
+
+/*For skill area*/
+.skill-section {
+	background: -webkit-gradient(linear,
+								left top, left bottom,
+								from(rgba(175,112,112,0.3)),
+								to(rgba(175,112,112,0.3))),
+								url(../image/background-image/skill-bg.jpg);
+	background: linear-gradient(rgba(175,112,112,0.3),
+								rgba(175,112,112,0.3)),
+								url(../image/background-image/skill-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+/*	background-attachment: fixed;*/
+	text-align: center;
+	overflow: hidden;
+}
+
+/*For color of h2 and h3*/
+.skill-section h2, h3{
+	color: #3c4761;
+}
+
+/*For horizontal row after h2*/
+.skill-section h2::after {
+	background: #eff3f6;
+}
+
+/*For increase distance of progress bar*/
+.skill-section .box {
+	margin-top: 4.5rem;
+}
+
+/*For width of circle (progress bar)*/
+svg.radial-progress circle {
+	stroke-width: 6; 
+}
+
+/*For color and size of text in the progress bar*/
+svg.radial-progress text {
+	fill: #3c4761; /*Color of text in progress bar*/
+	font-size: 1.5rem; /*Font size of text in progress bar*/
+}
+
+/*For 1st (web-design) progress bar*/
+svg.web-design circle {
+	stroke: #30bae7;/*For Color of the progress bar*/
+}
+
+/*For 2nd (html-css) progress bar*/
+svg.html-css circle {
+	stroke: #d74680;/*For Color of the progress bar*/
+}
+
+/*For 3rd (graphics-design) progress bar*/
+svg.graphics-design circle {
+	stroke: #15c7a8;/*For Color of the progress bar*/
+}
+
+/*For 4th (ui-ux) progress bar*/
+svg.ui-ux circle {
+	stroke: #eb7d4b;/*For Color of the progress bar*/
+}
+
+
+/*****************************/
+/* PORTFOLIO SECTION*/
+/*****************************/
+
+/*For portfolio area*/
+.protfolio-section {
+	background: -webkit-gradient(linear,
+		left top, left bottom,
+		from(rgba(255,221,153,0.9)),
+		to(rgba(255,221,153,0.9))),
+		url(../image/background-image/portfolio-bg.jpg);
+	background: linear-gradient(rgba(255,221,153,0.9),
+		rgba(255,221,153,0.9)),
+		url(../image/background-image/portfolio-bg.jpg);
+
+	background-repeat: no-repeat;
+	background-position: center 10%;
+	background-size: cover;
+/*	background-attachment: fixed;*/
+	text-align: center;
+}
+
+/*For color of h2*/
+.protfolio-section h2 {
+	color: #393939;
+}
+
+/*For color of horizontal line after h2*/
+.protfolio-section h2::after {
+	background: #e5c37f;
+}
+
+/*For color of p*/
+.protfolio-section p {
+	color: #534f46;
+}
+/*For adding marging on button*/
+.button-group  {
+	margin: 4.5rem 0;
+}
+
+/*For button for filtering*/
+.protfolio-section .button-group a {
+	border: 0;
+	display: inline-block;
+	margin: .5rem .5rem;
+	padding: 1.0rem 2.0rem;
+	border-radius: 0.5rem;
+	background-color: #ebc985;
+	color: #393939;
+	font-size: 1.8rem;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+/*For hover in button*/
+.protfolio-section .button-group a:hover {
+	cursor: pointer;
+	-webkit-box-shadow: inset 0 .3rem .5rem rgba(60,71,97,0.5);
+	box-shadow: inset 0 .3rem .5rem rgba(60,71,97,0.5);
+}
+
+/*For the active button is-checked is used*/
+.protfolio-section .button-group a.is-checked {
+	background-color: rgba(60,71,97,0.5);
+	color: #fff;
+}
+
+/*For image for portfolio filtering*/
+.protfolio-section .element-item img {
+	max-width: 100%;
+	height: 200px;
+	margin: 0;
+	padding: 0;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+/*For hover effect in image*/
+.protfolio-section .element-item:hover img {
+	-webkit-transform: scale(1.15);
+	transform: scale(1.15);
+} 
+
+/*For 3rd image margin problem*/
+.protfolio-section .col:nth-child(3) {
+	margin-left: 0;
+}
+
+
+/*Hidden load more project button*/
+/*.protfolio-section .btn-load-more {
+	background: #17c2a4;
+	color: #fff;
+	border-color: #14a58c;
+}*/
+
+/*
+.protfolio-section .mixitup-control-active {
+	background: #fff;
+}
+*/
+
+
+
+/*****************************/
+/* TESTIMONIAL SECTION*/
+/*****************************/
+
+/*For testimonial area*/
+.testimonial-section {
+	background: -webkit-gradient(linear,
+		left top, left bottom,
+		from(rgba(215,70,128,0.9)),
+		to(rgba(215,70,128,0.9))),
+		url(../image/background-image/testimonial.jpg);
+	background: linear-gradient(rgba(215,70,128,0.9),
+		rgba(215,70,128,0.9)),
+		url(../image/background-image/testimonial.jpg);
+
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+/*For centering the p tag*/
+.testimonial-section .little-description {
+	color: #fff;
+	text-align: center;
+} 
+
+
+/*For color of horizontal line after h2*/
+.testimonial-section h2::after {
+	background: #b73c6d;
+}
+
+
+/*For 3rd image margin problem*/
+.testimonial-section .col:nth-child(3) {
+	margin-left: 0;
+}
+
+
+/*For the height and width of .client-photo section*/
+.testimonial-section .client-photo {
+	width: 10rem;
+	float: left;
+}
+
+
+/*For the image size and margin*/
+.testimonial-section .client-photo img {
+	height: 8rem;
+	width: 8rem;
+	border-radius: 50%;
+	margin-bottom: 3rem;
+}
+
+/*For the height and width of .client-review section*/
+.testimonial-section .client-review {
+	width: 35rem;
+	float: left;
+}
+
+/*For the p tag of .client-review section*/
+.testimonial-section .client-review p {
+	font-size: 2.1rem;
+	font-style: italic;
+	margin-top: 0;
+	margin-bottom: 2rem;
+}
+
+
+.testimonial-section .client-review h3 {
+	text-align: left;
+}
+
+.client-review .role {
+	color: #ffdd99;
+}
+
+
+.testimonial-section .row-center {
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+/*For margin of 2 columns of 1st row*/
+.testimonial-section .col:nth-child(1),
+.testimonial-section .col:nth-child(2) {
+	margin-top: 4rem;
+}
+
+/*For margin of 2 columns of 2nd row*/
+.testimonial-section .col:nth-child(3),
+.testimonial-section .col:nth-child(4) {
+	margin-top: 8rem;
+}
+
+
+/*****************************/
+/* CONTACT SECTION*/
+/****************************/
+
+/*For contact area*/
+.contact-section {
+	background: -webkit-gradient(linear,
+		left top, left bottom,
+		from(rgba(60,84,153,0.9)),
+		to(rgba(60,84,153,0.9))),
+		url(../image/background-image/contact.jpg);
+	background: linear-gradient(rgba(60,84,153,0.9),
+		rgba(60,84,153,0.9)),
+		url(../image/background-image/contact.jpg);
+
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-attachment: fixed;
+	text-align: center;
+
+}
+
+/*For color of horizontal line after h2*/
+.contact-section h2::after {
+	background: #273a71;
+}
+
+/*For color of p tag*/
+.contact-section .little-description {
+	color: #fff;
+}
+
+/*For width and margin of form*/
+.contact-section form {
+	margin-top: 5rem;
+	width: 70%;
+	margin-left: 15%;
+}
+
+/*For input and text-area decoration*/
+.contact-section input[type="text"],
+.contact-section input[type="email"],
+.contact-section textarea {
+	background: -webkit-gradient(linear,
+		left top, left bottom,
+		from(rgba(39,58,113,0.1)),
+		to(rgba(39,58,113,0.9)));
+	background: linear-gradient(rgba(39,58,113,0.1),
+		rgba(39,58,113,0.9));
+	border: 1px solid #273a71;
+	width: 100%;
+	padding: 1.5rem;
+	border-radius: .5rem;
+	font-size: 1.8rem;
+	color: #fff;
+	margin: 0.5rem 0;
+}
+
+/*For height of textarea*/
+.contact-section textarea {
+	height: 20rem;
+}
+
+/*For color of placeholder*/
+.contact-section form ::-webkit-input-placeholder {
+	color: #fff;
+	opacity: 1;
+}
+.contact-section form :-ms-input-placeholder {
+	color: #fff;
+	opacity: 1;
+}
+.contact-section form ::placeholder {
+	color: #fff;
+	opacity: 1;
+}
+
+/*For button of form*/
+.contact-section .btn-submit {
+	border: 0;
+	border-bottom: .3rem solid #299ec5;
+	background: #30bae7;
+}
+
+/*For hover of button of form*/
+.contact-section .btn-submit:hover {
+	cursor: pointer;
+}
+
+
+
+/*****************************/
+/* FOOTER SECTION*/
+/****************************/
+
+/*For footer area*/
+.footer-section {
+	background: #344b89;
+	padding: 3rem 0;
+	text-align: center;
+	border-top: .1rem solid rgba(255,255,255,0.3);
+}
+
+/*For li of footer section*/
+.footer-section li {
+	display: inline-block;
+	margin: 0 2rem;
+}
+
+/*For a section of footer*/
+.footer-section li a {
+	color: #fff;
+	text-decoration: none;
+	text-transform: capitalize;
+	font-size: 2.4rem;
+}
+
+/*For hover color in a*/
+.footer-section li:hover a {
+	color: #30bae7;
+}
+
+

@@ -1,0 +1,171 @@
+@media only screen and (max-width: 1200px) {
+
+	/*For all row margin*/
+	.row {
+		margin: 0 15px;
+	}
+
+	/*For width of hero-text-box*/
+	.hero-text-box {
+		width: 90%;
+	}
+
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+	/*For showing Nav-bar icon*/
+	header nav .mobile-menu span {
+		display: block;
+	}
+
+
+	/*For hide the nav-bar*/
+	.main-nav {
+		display: none;
+	}
+
+	/*For decreasing all font-size in body*/
+	html {
+		font-size: 57.5%;
+	}
+
+	/*For re-arranging the client photo in the 
+	testimonial section */
+	.testimonial-section .client-photo {
+		width: 100%;
+		float: none;
+		text-align: center;
+	}
+
+	/*For re-arranging the client review in the 
+	testimonial section */
+	.testimonial-section .client-review {
+		width: 100%;
+		float: none;
+		text-align: center;
+	}
+
+	/*For re-arranging the h3 of client review in 
+	the testimonial section */
+	.testimonial-section .client-review h3 {
+		text-align: center;
+	}
+
+	/*For form width*/
+	.contact-section form {
+		width: 100%;
+		margin-left: 0;
+	}
+
+	/*for margin in hero-text-box*/
+	.hero-text-box {
+		margin: 1.5rem 0 0 0;
+	}
+
+}
+
+
+
+@media only screen and (max-width: 980px) {
+	
+	/*For Font size of all places*/
+	html {
+		font-size: 60%;
+	}
+
+	/*For making all 4 columns into 2 columns*/
+	.span_1_of_4 {
+		width: 49.2%;
+	}
+
+	/*For decrease margin from all 3rd image*/
+	.span_1_of_4:nth-child(3) {
+		margin-left: 0;
+	}
+
+	.hero-text-box {
+		margin: 1.5rem 0 0 0;
+	}
+	/*For margin of hero-text-box*/
+/*	.hero-text-box {
+		width: 90%;
+		margin-right: 5%;
+	}*/
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+	/*For Font size of all places*/
+	html {
+		font-size: 60.5%;
+	}
+
+	/*For all p tag*/
+	.little-description {
+		width: 100%;
+		margin-left: 0;
+	}
+
+	/*For footer section padding*/
+	.footer-section {
+		padding: 2rem 0;
+	}
+
+	/*For a section of footer*/
+	.footer-section li a {
+		font-size: 2rem;
+	}
+
+	.hero-text-box {
+		margin: 1.5rem 0 0 0;
+	}
+
+	/*For decrease the font size of h1, h2, h3*/
+	h1 {
+		font-size: 3.5rem;
+	}
+
+	h2 {
+		font-size: 3rem;
+	}
+
+	h3 {
+		font-size: 2rem;
+	}
+}
+
+
+@media only screen and (max-width: 480px) {
+
+	/*For making the all 1/4 column width to 100%*/
+	.span_1_of_4 {
+		width: 100%;
+	}
+
+	/*For margin of 2 columns of 2nd row*/
+	.testimonial-section .col:nth-child(3),
+	.testimonial-section .col:nth-child(4) {
+		margin-top: 4rem;
+	}
+
+	/*For decrease the font size of h1, h2, h3*/
+	h1 {
+		font-size: 3rem;
+	}
+
+	h2 {
+		font-size: 2.5rem;
+	}
+
+	h3 {
+		font-size: 2rem;
+	}
+}
+
+
+
+
